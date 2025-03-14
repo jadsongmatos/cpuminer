@@ -15,7 +15,7 @@ RUN             git clone https://github.com/pooler/cpuminer
 
 RUN             cd cpuminer && \
                 ./autogen.sh && \
-                ./configure CFLAGS="-O3" && \
+                ./configure CFLAGS="-O3 -march=native" && \
                 make
 
 WORKDIR         /cpuminer
